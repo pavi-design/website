@@ -1,0 +1,121 @@
+.pavi-font {
+	font-size: 20px;
+    color: rgba(17, 17, 17, 0.7);
+}
+
+.pavi-font-underline {	
+	border-bottom: solid 1px rgba(17, 17, 17, 0.3);
+}
+
+.pavi-main-font {	
+	font-weight: bold;
+    font-size: 25px;
+	color: rgba(17, 17, 17, 0.7);
+}
+
+.pavi-main-margin {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.pavi-main-image {	
+	flex-shrink: 1;
+
+	height: auto;
+	width: auto;
+
+	max-height: 400px;
+	border-radius: 30px;	
+	margin: auto;
+}
+
+.pavi-divider {
+	border-bottom: solid 3px rgba(210, 215, 211, 0.4);
+}
+
+
+.pavi-main-flex-container {
+	display: flex;	
+	align-content: : center;
+	align-items: : center;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.pavi-display-table {
+	display: table;
+}
+
+.pavi-table-border {
+	border: solid 1px #efefef;
+}
+
+.pavi-media {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 300px;
+	width: 100%;
+	background-color: rgba(210, 215, 211, 1);
+}
+
+.pavi-paragraph {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.pavi-ul-numbered {
+	list-style-type: decimal;
+	list-style-position: outside;
+	list-style-image: none;
+}
+
+.pavi-ul-circle {
+	list-style-type: circle;
+	list-style-position: outside;
+	list-style-image: none;
+}
+
+.pavi-ul-numbered, .pavi-ul-circle {
+	margin-bottom: 0;
+}
+
+.pavi-anchor-remove {
+	border: none;
+	transition: unset;
+	color: transparent;
+}
+
+.pavi-ul-numbered li,
+.pavi-ul-circle li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pavi-image {
+	width: 100%;
+    border-radius: 20px;
+}
+
+.pavi-persona-image {
+	border: solid 3px rgba(210, 215, 211, 0.4);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.pavi-gif {
+	border-radius: 30px;
+	width: 100%;
+	max-width: 700px;
+}
+
+.pavi-text-center {
+	text-align: center;
+}
+
+.pavi-margin-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
