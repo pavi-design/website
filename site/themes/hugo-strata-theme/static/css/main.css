@@ -1994,7 +1994,8 @@
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background: url("images/overlay.png");
+			/* todo: remove */
+			/* background: url("images/overlay.png"); */
 			border-radius: 0.35em;
 			content: '';
 			display: block;
@@ -2039,7 +2040,8 @@
 			}
 
 			.image.thumb:hover:before {
-				background: url("images/overlay.png"), url("images/overlay.png");
+				/* todo: remove */
+				/* background: url("images/overlay.png"), url("images/overlay.png"); */
 				opacity: 1.0;
 			}
 
@@ -3157,3 +3159,24 @@
 	 font-size: 20px;
 	 line-height: 36px;
  }
+
+ 
+ /* Pavi CSS */
+
+ .pavi-portfolio-size {
+    max-width: 250px;
+}
+
+.pavi-contact-section {
+	margin: 0 !important;
+	padding-top: 40px !important;
+}
+
+.pavi-center-article {
+	width: auto !important;
+	float: none !important;
+}
+
+.pavi-center-view-text:after {
+	left: 52% !important;
+}

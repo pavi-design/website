@@ -36,8 +36,8 @@
 
 .pavi-main-flex-container {
 	display: flex;	
-	align-content: : center;
-	align-items: : center;
+	align-content: center;
+	align-items: center;
 	flex-direction: row;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -115,7 +115,7 @@
 }
 
 .pavi-margin-center {
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 

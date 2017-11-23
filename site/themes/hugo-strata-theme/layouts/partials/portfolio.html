@@ -3,11 +3,13 @@
 	{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
 	<div class="row">
 		{{ range .Site.Params.portfolio.gallery }}
-		<article class="6u 12u$(xsmall) work-item">
+		<article class="6u 12u$(xsmall) work-item pavi-center-article">
 
 			<!-- <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a> -->
 
-			<a href="{{ $.Site.BaseURL }}portfolio/tempo" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a>
+			<a href="{{ $.Site.BaseURL }}portfolio/tempo" class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
+				<img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="tempo portfolio" />
+			</a>
 
 			<h3>{{ .title | markdownify }}</h3>
 			<p>{{ .description | markdownify }}</p>

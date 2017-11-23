@@ -49,14 +49,14 @@ paginate = 10
 
 	[params.portfolio]
 		hide  = false
-		title = "Portfolio"
+		title = ""
 
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
 			image = "fulls/01.jpg"
 			# thumb = "thumbs/01.jpg"
-			thumb = "portfolio/tempo/tempo-main-1-01.jpg"
+			thumb = "portfolio/tempo/tempo-intro.png"
 			title = ""
 			description = ""
 
@@ -128,7 +128,7 @@ paginate = 10
 
 # Menu links that appear on the left sidebar
 [[menu.main]]
-	name = "Portfolio"
+	name = "Home"
 	url  = "/"
 	weight = 1
 
