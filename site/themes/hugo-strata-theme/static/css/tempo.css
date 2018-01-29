@@ -1,6 +1,10 @@
+.pavi-font-family {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
 .pavi-font {
 	font-size: 20px;
-    color: rgba(17, 17, 17, 0.7);
+  color: rgba(17, 17, 17, 0.7);
 }
 
 .pavi-font-underline {
@@ -9,7 +13,7 @@
 
 .pavi-main-font {
 	font-weight: bold;
-    font-size: 25px;
+  font-size: 25px;
 	color: rgba(17, 17, 17, 0.7);
 }
 
@@ -36,7 +40,6 @@
 .pavi-divider {
 	border-bottom: solid 3px rgba(210, 215, 211, 0.4);
 }
-
 
 .pavi-main-flex-container {
 	display: flex;
