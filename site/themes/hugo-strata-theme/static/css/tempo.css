@@ -10,6 +10,7 @@ body {
     padding-top: 1px;
     padding-bottom: 15px;
     box-shadow: 0 8px 6px -6px rgba(210, 215, 211, 0.4);
+    margin-bottom: 30px;
 }
 
 .pavi-active-tab {
@@ -21,7 +22,7 @@ body {
 }
 
 .pavi-font {
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(17, 17, 17, 0.7);
 }
 
@@ -31,9 +32,14 @@ body {
 }*/
 
 .pavi-portfolio-header-font {
-    font-size: 35px;
+    font-size: 28px;
     color: rgba(17, 17, 17, 0.7);
     font-weight: bold;
+}
+
+.pavi-portfolio-header-margin {
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 .pavi-anchor-default {
@@ -43,7 +49,7 @@ body {
 
 .pavi-main-font {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
     color: rgba(17, 17, 17, 0.7);
 }
 
@@ -56,8 +62,8 @@ body {
 }
 
 .pavi-main-margin {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .pavi-main-image {
@@ -75,16 +81,28 @@ body {
     padding: 5px;
 }
 
+.pavi-shots-image {
+    flex-shrink: 1;
+    max-width: 225px;
+    padding: 5px;
+}
+
 .pavi-divider {
     border-bottom: solid 3px rgba(210, 215, 211, 0.4);
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
+.pavi-shots-image-text {
+    padding-left: 18px;
+    font-size: 16px !important;
+    line-height: 2;
+}
+
 .pavi-main-flex-container {
     display: flex;
     align-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -120,6 +138,7 @@ body {
     list-style-type: decimal;
     list-style-position: outside;
     list-style-image: none;
+    padding-left: 18px;
 }
 
 .pavi-ul-circle {
@@ -145,8 +164,30 @@ body {
 }
 
 .pavi-image {
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.pavi-image-width-full {
     width: 100%;
-    border-radius: 20px;
+}
+
+.pavi-image-width-persona {
+    width: 100%;
+    max-width: 300px;
+}
+
+.pavi-image-max-width-650 {
+    max-width: 650px !important;
+}
+
+.pavi-image-margin-top {
+    margin-top: 30px;
+}
+
+.pavi-image-width-wireframe3 {
+    width: 100%;
+    max-width: 600px;
 }
 
 .pavi-persona-image {
