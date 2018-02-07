@@ -8,22 +8,22 @@
         <li><a href="//facebook.com/{{ . }}" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
         {{ end }}
 		{{ with .Site.Params.sidebar.twitter }}
-		<li><a href="//twitter.com/{{ . }}" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="//twitter.com/{{ . }}" target="_blank" title="Pavi's Twitter" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.sidebar.github }}
 		<li><a href="//github.com/{{ . }}" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.sidebar.linkedin }}
-		<li><a href="//linkedin.com/in/{{ . }}" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		<li><a href="//linkedin.com/in/{{ . }}" target="_blank" title="Pavi's LinkedIn" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.sidebar.dribbble }}
-		<li><a href="//dribbble.com/{{ . }}" target="_blank" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+		<li><a href="//dribbble.com/{{ . }}" target="_blank" title="Pavi's Dribbble" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.sidebar.flickr }}
 		<li><a href="//flickr.com/photos/{{ . }}" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.contact.email }}
-		<li><a href="{{ $.Site.BaseURL }}#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		<li><a href="{{ $.Site.BaseURL }}#contact-form" title="Contact Pavi" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 		{{ end }}
 	</ul>
 
