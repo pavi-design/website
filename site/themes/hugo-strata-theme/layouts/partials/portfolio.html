@@ -1,19 +1,32 @@
 {{ "<!-- portfolio -->" | safeHTML }}
 <section>
-	{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
-	<div class="row">
-		{{ range .Site.Params.portfolio.gallery }}
-		<article class="6u 12u$(xsmall) work-item pavi-center-article">
+    {{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+    <div class="row">
+        {{ range .Site.Params.portfolio.gallery }}
+        <article class="6u 12u$(xsmall) work-item">
 
-			<!-- <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a> -->
+            <!-- <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a> -->
 
-			<a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch" title="Tempo Portfolio" class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
-				<img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="tempo portfolio" />
-			</a>
+            <a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch" title="Tempo Project"
+               class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
+                <p class="pavi-font">Tempo</p>
+                <img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="tempo portfolio"/>
+            </a>
 
-			<h3>{{ .title | markdownify }}</h3>
-			<p>{{ .description | markdownify }}</p>
-		</article>
-		{{ end }}
-	</div>
+
+            <!--<h3>{{ .title | markdownify }}</h3>-->
+            <!--<p>{{ .description | markdownify }}</p>-->
+        </article>
+
+        <article class="6u 12u$(xsmall) work-item">
+            <a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch" title="Bolt Project"
+               class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
+                <p class="pavi-font">Bolt</p>
+                <img src="{{ $.Site.BaseURL }}images/portfolio/bolt/preview/logo_intro.jpg" alt="Bolt project"/>
+            </a>
+        </article>
+
+
+        {{ end }}
+    </div>
 </section>
