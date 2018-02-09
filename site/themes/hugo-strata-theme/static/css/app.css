@@ -74,7 +74,7 @@ body {
 
     max-height: 400px;
     border-radius: 30px;
-    margin: auto;
+    margin: 5px auto;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
@@ -172,6 +172,11 @@ body {
     width: 100%;
 }
 
+.pavi-image-width-bolt {
+    width: 100%;
+    max-width: 500px;
+}
+
 .pavi-image-width-persona {
     width: 100%;
     max-width: 300px;
@@ -179,6 +184,7 @@ body {
 
 .pavi-image-max-width-650 {
     max-width: 650px !important;
+    width: 100%;
 }
 
 .pavi-image-margin-top {
