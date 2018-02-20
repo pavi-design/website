@@ -1,6 +1,9 @@
 {{ "<!-- portfolio -->" | safeHTML }}
 <section>
-    {{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+    <!--{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}-->
+
+    <h2 id='portfolio-section' class="pavi-margin-bottom-20px">Portfolio</h2>
+
     <div class="row">
         {{ range .Site.Params.portfolio.gallery }}
         <article class="6u 12u$(xsmall) work-item">

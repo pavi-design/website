@@ -1,6 +1,6 @@
 {{ "<!-- Header -->" | safeHTML }}
 <header id="header">
-	<a href="{{ .Site.BaseURL }}" class="image avatar"><img src="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" alt="" /></a>
+	<a href="{{ .Site.BaseURL }}" title="Boo!" class="image avatar pavi-hover-invert"><img src="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" alt="" /></a>
 	{{ with .Site.Params.sidebar.bio }}
 		<h1>{{ . | markdownify }}</h1>
 	{{ end }}
