@@ -39,6 +39,10 @@ body {
     color: rgba(17, 17, 17, 0.7);
 }
 
+.pavi-section-padding-top {
+    padding-top: 10px !important;
+}
+
 /* todo: remove */
 /*.pavi-font-underline {
 	border-bottom: solid 1px rgba(17, 17, 17, 0.3);

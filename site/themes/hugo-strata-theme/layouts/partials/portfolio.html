@@ -1,5 +1,6 @@
 {{ "<!-- portfolio -->" | safeHTML }}
 <section>
+    <!-- todo: remove -->
     <!--{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}-->
 
     <h2 id='portfolio-section' class="pavi-margin-bottom-20px">Portfolio</h2>
@@ -8,6 +9,7 @@
         {{ range .Site.Params.portfolio.gallery }}
         <article class="6u 12u$(xsmall) work-item">
 
+            <!-- todo: remove -->
             <!-- <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a> -->
 
             <a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch" title="Tempo Project"

@@ -91,7 +91,7 @@ paginate = 10
 		# 	description = "Lorem ipsum dolor sit amet."
 
 	[params.recentposts]
-		hide  = true
+		hide  = false
 		title = "Recent blog posts"
 
 	[params.contact]

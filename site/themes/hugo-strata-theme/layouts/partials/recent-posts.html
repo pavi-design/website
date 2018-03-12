@@ -1,16 +1,21 @@
-<section>
-    {{ with .Site.Params.recentposts.title }}
-        <h2>{{ . }}</h2>
-    {{ end }}
+<!-- todo: remove -->
+<!--<section>-->
+    <!--{{ with .Site.Params.recentposts.title }}-->
+        <!--<h2>{{ . }}</h2>-->
+    <!--{{ end }}-->
 
-	<div class="row">
-        <br>
-        <p>
-        <ol class="recent-posts">
-        {{ range first 5 (where .Data.Pages "Section" "post") }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-        </ol>
-        </p>
-	</div>
+	<!--<div class="row">-->
+        <!--<br>-->
+        <!--<p>-->
+        <!--<ol class="recent-posts">-->
+        <!--{{ range first 5 (where .Data.Pages "Section" "post") }}-->
+            <!--<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>-->
+        <!--{{ end }}-->
+        <!--</ol>-->
+        <!--</p>-->
+	<!--</div>-->
+<!--</section>-->
+
+<section class="pavi-section-padding-top pavi-text-center">
+    <a class="twitter-timeline" data-lang="en" data-height="700" data-dnt="true" data-theme="light" data-link-color="#19CF86" href="https://twitter.com/pavi_design?ref_src=twsrc%5Etfw">Tweets by pavi_design</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
