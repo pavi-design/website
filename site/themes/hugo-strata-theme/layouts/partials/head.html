@@ -9,9 +9,6 @@
     	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     	{{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
 
-		<!-- todo: remove -->
-		<meta name="google-site-verification" content="psrXlQBFAUELrJUiQenGu7EuLckjMS09v6nvFmXHVu0" />
-
 		{{ .Hugo.Generator }}
 
 		{{ "<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->" | safeHTML}}
