@@ -91,7 +91,7 @@ paginate = 10
 		# 	description = "Lorem ipsum dolor sit amet."
 
 	[params.recentposts]
-		hide  = true
+		hide  = false
 		title = "Recent blog posts"
 
 	[params.contact]
@@ -135,17 +135,26 @@ paginate = 10
 [[menu.main]]
 	name = "Portfolio"
 	url  = "https://pavi.design/#portfolio-section"
+	jump = false
 	weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url  = "https://medium.com/@pavilogeswa"
+    jump = true
+    weight = 2
 
 [[menu.main]]
     name = "Visual"
     url  = "/visual/overview"
-    weight = 2
+    jump = false
+    weight = 3
 
 [[menu.main]]
     name = "Contact"
     url  = "https://pavi.design/#contact-form"
-    weight = 3
+    jump = false
+    weight = 4
 
 # [[menu.main]]
 # 	name = "Contact"

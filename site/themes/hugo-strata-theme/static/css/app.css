@@ -39,10 +39,18 @@ body {
     color: rgba(17, 17, 17, 0.7);
 }
 
-/* todo: remove */
-/*.pavi-font-underline {
-	border-bottom: solid 1px rgba(17, 17, 17, 0.3);
-}*/
+.pavi-section {
+
+    padding-top: 25px !important;
+    margin-top: 5px !important;
+    
+}
+
+.pavi-row {
+
+    margin-bottom: 35px !important;
+
+}
 
 .pavi-portfolio-header-font {
     font-size: 28px;
