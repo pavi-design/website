@@ -11,6 +11,15 @@ body {
     filter: invert(100%);
 }
 
+.pavi-about-me-social {
+    font-size: 20px;
+}
+
+.pavi-about-me-image {
+    margin-top: 20px;
+    display: block;
+}
+
 .pavi-margin-bottom-20px {
     margin-bottom: 20px;
 }

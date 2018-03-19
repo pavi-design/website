@@ -1,0 +1,94 @@
+{{ define "main" }}
+
+<section>
+
+    <h2>Who's Pavi?</h2>
+
+    <img class='pavi-image pavi-margin-center pavi-about-me-image'
+         src="{{ $.Site.BaseURL }}images/about-me/pavi-dance.png">
+
+    <div class="pavi-font pavi-paragraph">
+        As a biochemist and now UI/UX Product Designer, I’m always looking to
+        experiment and quickly learn new things.
+    </div>
+
+    <div class="pavi-font pavi-paragraph">
+        I’ve learned more about user experience from being a Biochemist, Dancer and
+        Teacher than I could’ve ever imagined.
+    </div>
+
+    <div class="pavi-font pavi-paragraph">
+        I’ve been passionate about dance since I was 4 and I’ve never stopped since. I love
+        trying new restaurants with vegan options and also enjoy experimenting with
+        recipes.
+    </div>
+
+    <div class="pavi-font pavi-paragraph">
+        Feel free to reach out if you’d like to chat about design or building a portfolio.
+    </div>
+
+    <ul class="icons pavi-text-center pavi-about-me-social">
+        <li><a href="https://twitter.com/pavi_design" target="_blank" title="Pavi's Twitter" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/pavitra-logeswaran-78637187" target="_blank" title="Pavi's LinkedIn" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+        <li><a href="https://dribbble.com/Pavitra" target="_blank" title="Pavi's Dribbble" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+    </ul>
+
+</section>
+
+<section class="pavi-contact-section">
+    <h2>Get in Touch</h2>
+    <p></p>
+    <div class="row" id="contact-form">
+        {{ if (isset .Site.Params.contact "email") | and (gt (len .Site.Params.contact.email) 0) }}
+        <div class="8u 12u$(small)">
+            <form action="//formspree.io/{{ .Site.Params.contact.email }}" method="POST">
+                <div class="row uniform 50%">
+                    <input type="hidden" name="_subject" value="New email from your portfolio" />
+                    <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="{{ .Site.Params.contact.form.name }}" required/></div>
+                    <div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" name="email" id="email" placeholder="{{ .Site.Params.contact.form.email }}" required/></div>
+                    <div class="12u$"><textarea name="message" id="message" placeholder="{{ .Site.Params.contact.form.message }}" rows="4" required></textarea></div>
+                    <input type="text" name="_gotcha" style="display:none" />
+
+                    <ul class="actions">
+                        <li><input type="submit" value="{{ .Site.Params.contact.form.submit }}" /></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        {{ else }}
+        <div class="8u 12u$(small)">&nbsp;</div>
+        {{ end }}
+        <div class="4u$ 12u$(small)">
+            <ul class="labeled-icons">
+                {{ if isset .Site.Params.contact "address" }}
+                <li>
+                    <h3 class="icon fa-home"><span class="label"></span></h3>
+                    {{ range .Site.Params.contact.address }}
+                    {{ . }}<br />
+                    {{ end}}
+                </li>
+                {{ end }}
+                {{ if isset .Site.Params.contact "phone" }}
+                <li>
+                    <h3 class="icon fa-mobile"><span class="label"></span></h3>
+                    {{ .Site.Params.contact.phone }}
+                </li>
+                {{ end }}
+                {{ if isset .Site.Params.contact "jabber" }}
+                <li>
+                    <h3 class="icon fa fa-mobile"><span class="label"></span></h3>
+                    <a href="#">{{ .Site.Params.contact.jabber }}</a>
+                </li>
+                {{ end }}
+                {{ if isset .Site.Params.contact "email" }}
+                <li>
+                    <h3 class="icon fa-envelope-o"><span class="label"></span></h3>
+                    <a href="#">{{ .Site.Params.contact.email }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</section>
+
+{{ end }}

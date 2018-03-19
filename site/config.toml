@@ -95,7 +95,7 @@ paginate = 10
 		title = "Recent blog posts"
 
 	[params.contact]
-		hide  = false
+		hide  = true
 		title = "Get In Touch"
 		content = " "
 
@@ -151,10 +151,17 @@ paginate = 10
     weight = 3
 
 [[menu.main]]
-    name = "Contact"
-    url  = "https://pavi.design/#contact-form"
+    name = "About me"
+    url  = "/about/me"
     jump = false
     weight = 4
+
+
+#[[menu.main]]
+#    name = "About me"
+#    url  = "https://pavi.design/#contact-form"
+#    jump = false
+#    weight = 4
 
 # [[menu.main]]
 # 	name = "Contact"
