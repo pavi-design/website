@@ -115,7 +115,7 @@ paginate = 10
 	    # - send a dummy email yourself to confirm your account
 	    # - click the confirm link in the email from www.formspree.io
 	    # - you're done. Happy mailing!
-		email = "pavilogeswa@gmail.com"
+		email = "pavi@pavi.design"
 
 		[params.contact.form]
 			# Set custom strings for the form if your native
