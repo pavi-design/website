@@ -185,6 +185,7 @@ body {
     list-style-type: circle;
     list-style-position: outside;
     list-style-image: none;
+    padding-left: 18px;
 }
 
 .pavi-ul-numbered, .pavi-ul-circle {
