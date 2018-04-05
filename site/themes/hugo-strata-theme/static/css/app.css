@@ -39,7 +39,7 @@ body {
 }
 
 .pavi-portfolio-sticky-header {
-    position: sticky;
+    /*position: sticky;*/  /* todo: remove */
     top: 0;
     background: #fff;
     border-bottom: solid 3px rgba(210, 215, 211, 0.4);
