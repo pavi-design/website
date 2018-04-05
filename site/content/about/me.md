@@ -1,7 +1,7 @@
 ---
-title: About Me
+title: About
 date: 18-03-19
-description: About Me
+description: About
 type: about
 layout: me
 ---

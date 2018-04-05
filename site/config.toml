@@ -54,9 +54,8 @@ paginate = 10
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			image = "fulls/01.jpg"
-			# thumb = "thumbs/01.jpg"
-			thumb = "portfolio/tempo/tempo-intro.png"
+			image = ""
+			thumb = ""
 			title = ""
 			description = ""
 
@@ -115,7 +114,7 @@ paginate = 10
 	    # - send a dummy email yourself to confirm your account
 	    # - click the confirm link in the email from www.formspree.io
 	    # - you're done. Happy mailing!
-		email = "pavi@pavi.design"
+		email = "pavilogeswa@gmail.com"
 
 		[params.contact.form]
 			# Set custom strings for the form if your native
@@ -133,8 +132,8 @@ paginate = 10
 # 	weight = 1
 
 [[menu.main]]
-	name = "Portfolio"
-	url  = "https://pavi.design/#portfolio-section"
+	name = "Work"
+	url  = "/"
 	jump = false
 	weight = 1
 
@@ -144,20 +143,20 @@ paginate = 10
     jump = true
     weight = 2
 
-[[menu.main]]
-    name = "Visual"
-    url  = "/visual/overview"
-    jump = false
-    weight = 3
+#[[menu.main]]
+#    name = "Visual"
+#    url  = "/visual/overview"
+#    jump = false
+#    weight = 3
 
 [[menu.main]]
-    name = "About me"
+    name = "About"
     url  = "/about/me"
     jump = false
     weight = 4
 
 
-#[[menu.main]]
+# [[menu.main]]
 #    name = "About me"
 #    url  = "https://pavi.design/#contact-form"
 #    jump = false

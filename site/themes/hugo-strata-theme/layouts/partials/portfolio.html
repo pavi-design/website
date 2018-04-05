@@ -3,40 +3,39 @@
     <!-- todo: remove -->
     <!--{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}-->
 
-    <h2 id='portfolio-section' class="pavi-margin-bottom-20px">Portfolio</h2>
+    <h2 id='portfolio-section' class='pavi-margin-bottom-20px'>Recent Work</h2>
 
-    <div class="row">
-        {{ range .Site.Params.portfolio.gallery }}
-        <article class="6u 12u$(xsmall) work-item">
+    <section>
+        <div class="row">
 
-            <!-- todo: remove -->
-            <!-- <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a> -->
+            <article class="6u 12u$(xsmall) work-item">
+                <a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch"
+                   title='Tempo Project'
+                   class="image fit thumb">
+                    <img src="{{ $.Site.BaseURL }}images/portfolio/tempo/tempointro.jpg" alt="Tempo" />
+                </a>
+                <h3>Tempo</h3>
+                <p>An iOS app assisting dancers with rehearsals using voice commands.</p>
+            </article>
 
-            <a href="{{ $.Site.BaseURL }}portfolio/tempo/pitch" title="Tempo Project"
-               class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
-                <p class="pavi-font">Tempo</p>
-                <img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="tempo portfolio"/>
-            </a>
+            <article class="6u 12u$(xsmall) work-item">
+                <a href="{{ $.Site.BaseURL }}portfolio/bolt/main" class="image fit thumb">
+                    <img src="{{ $.Site.BaseURL }}images/portfolio/bolt/boltintro.jpg" alt="Bolt" />
+                </a>
+                <h3>Bolt</h3>
+                <p>Brand concept for dogs' outdoor equipment.</p>
+            </article>
 
-        </article>
+            <article class="6u 12u$(xsmall) work-item">
+                <a href="https://medium.com/@pavilogeswa/monument-valley-puzzle-extension-39098e69df47" class="image fit thumb">
+                    <img src="{{ $.Site.BaseURL }}images/portfolio/puzzle-extension/mvintro.jpg"
+                         alt="Puzzle Extension" />
+                </a>
+                <h3>Puzzle Extension</h3>
+                <p>Onboarding experience in a consumer-to-consumer platform.</p>
+            </article>
 
-        <article class="6u 12u$(xsmall) work-item">
-            <a href="{{ $.Site.BaseURL }}portfolio/bolt/main" title="Bolt Project"
-               class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
-                <p class="pavi-font">Bolt</p>
-                <img src="{{ $.Site.BaseURL }}images/portfolio/bolt/logo_bolt.jpg" alt="Bolt project"/>
-            </a>
-        </article>
+        </div>
+    </section>
 
-
-        <article class="6u 12u$(xsmall) work-item">
-            <a href="https://medium.com/@pavilogeswa/monument-valley-puzzle-extension-39098e69df47" target="_blank" title="Monument Valley Puzzle Extension Project"
-               class="image fit thumb pavi-center-view-text pavi-portfolio-size pavi-margin-center">
-                <p class="pavi-font">Puzzle Extension</p>
-                <img src="{{ $.Site.BaseURL }}images/portfolio/puzzle-extension/ida-character2.png" alt="Monument Valley Puzzle Extension Project"/>
-            </a>
-        </article>
-
-        {{ end }}
-    </div>
 </section>
