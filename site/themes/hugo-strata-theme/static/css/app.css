@@ -1,261 +1,285 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-family : -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+.pavi-particle canvas {
+    position : absolute;
+    z-index  : 1;
+    left     : 0;
+    top      : 0;
 }
 
 .pavi-hover-invert {
-    filter: invert(0%);
-    transition: -webkit-filter 0.5s, filter 0.5s;
+    /*filter     : invert(0%);*/
+    /*transition : -webkit-filter 0.5s, filter 0.5s;*/
 }
 
 .pavi-work-border-radius {
-    border-radius: 40px !important;
+    border-radius : 40px !important;
 }
 
 .pavi-work-right {
-    margin-left: auto !important;
+    margin-left : auto !important;
 }
 
 .pavi-work-container {
-    display: flex;
+    display     : flex;
     /*flex-wrap: wrap; todo: remove */
-    align-items: center;
+    align-items : center;
 }
 
 .pavi-hover-invert:hover {
-    filter: invert(100%);
+    /*filter    : invert(100%);*/
+    /*animation : rainbow 0.9s infinite;*/
+    animation : rainbow 2s infinite;
+}
+
+@keyframes rainbow {
+    0%, 100% {
+        -webkit-filter : invert(0) saturate(100%) hue-rotate(0deg);
+        filter         : invert(0) saturate(100%) hue-rotate(0deg);
+    }
+    25% {
+        -webkit-filter : invert(10%) saturate(500%) hue-rotate(180deg);
+        filter         : invert(10%) saturate(500%) hue-rotate(180deg);
+    }
+    50% {
+        -webkit-filter : invert(10%) saturate(300%) hue-rotate(300deg);
+        filter         : invert(10%) saturate(300%) hue-rotate(300deg);
+    }
+    75% {
+        -webkit-filter : invert(10%) saturate(500%) hue-rotate(90deg);
+        filter         : invert(10%) saturate(500%) hue-rotate(90deg);
+    }
 }
 
 .pavi-about-me-social {
-    font-size: 20px;
+    font-size : 20px;
 }
 
 .pavi-about-me-image {
-    margin-top: 20px;
-    display: block;
+    margin-top : 20px;
+    display    : block;
 }
 
 .pavi-margin-bottom-20px {
-    margin-bottom: 20px;
+    margin-bottom : 20px;
 }
 
 .pavi-portfolio-sticky-header {
-    /*position: sticky;*/  /* todo: remove */
-    top: 0;
-    background: #fff;
-    border-bottom: solid 3px rgba(210, 215, 211, 0.4);
-    padding-top: 1px;
-    padding-bottom: 15px;
-    box-shadow: 0 8px 6px -6px rgba(210, 215, 211, 0.4);
-    margin-bottom: 30px;
+    /*position: sticky;*/ /* todo: remove */
+    top            : 0;
+    background     : #FFFFFF;
+    border-bottom  : solid 3px rgba(210, 215, 211, 0.4);
+    padding-top    : 1px;
+    padding-bottom : 15px;
+    box-shadow     : 0 8px 6px -6px rgba(210, 215, 211, 0.4);
+    margin-bottom  : 30px;
 }
 
 .pavi-active-tab {
-    background-color: #6fffd699;
-    padding: 6px;
-    border-radius: 6px;
-    border-bottom: none;
-    font-weight: bold;
+    background-color : #6FFFD699;
+    padding          : 6px;
+    border-radius    : 6px;
+    border-bottom    : none;
+    font-weight      : bold;
 }
 
 .pavi-font.pavi-font.pavi-font {
-    font-size: 18px;
-    color: rgba(17, 17, 17, 0.7);
+    font-size : 18px;
+    color     : rgba(17, 17, 17, 0.7);
 }
 
 .pavi-section {
-    padding-top: 25px !important;
-    margin-top: 5px !important;
+    padding-top : 25px !important;
+    margin-top  : 5px !important;
 }
 
 .pavi-row {
-    margin-bottom: 35px !important;
+    margin-bottom : 35px !important;
 }
 
 .pavi-portfolio-header-font {
-    font-size: 28px;
-    color: rgba(17, 17, 17, 0.7);
-    font-weight: bold;
+    font-size   : 28px;
+    color       : rgba(17, 17, 17, 0.7);
+    font-weight : bold;
 }
 
 .pavi-portfolio-header-margin {
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-top    : 14px;
+    margin-bottom : 14px;
 }
 
 .pavi-anchor-default {
-    border-bottom: none !important;
-    color: transparent !important;
+    border-bottom : none !important;
+    color         : transparent !important;
 }
 
 .pavi-main-font {
-    font-weight: bold;
-    font-size: 22px;
-    color: rgba(17, 17, 17, 0.7);
+    font-weight : bold;
+    font-size   : 22px;
+    color       : rgba(17, 17, 17, 0.7);
 }
 
 .pavi-font-underline {
-    text-decoration: underline;
+    text-decoration : underline;
 }
 
 .pavi-font-bold {
-    font-weight: bold;
+    font-weight : bold;
 }
 
 .pavi-main-margin {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top    : 20px;
+    margin-bottom : 20px;
 }
 
 .pavi-main-image {
-    flex-shrink: 1;
-
-    height: auto;
-    width: auto;
-
-    max-height: 400px;
-    border-radius: 30px;
-    margin: 5px auto;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-    padding: 5px;
+    flex-shrink   : 1;
+    height        : auto;
+    width         : auto;
+    max-height    : 400px;
+    border-radius : 30px;
+    margin        : 5px auto;
+    box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
+    padding       : 5px;
 }
 
 .pavi-shots-image {
-    flex-shrink: 1;
-    max-width: 225px;
-    padding: 5px;
+    flex-shrink : 1;
+    max-width   : 225px;
+    padding     : 5px;
 }
 
 .pavi-divider {
-    border-bottom: solid 3px rgba(210, 215, 211, 0.4);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    border-bottom : solid 3px rgba(210, 215, 211, 0.4);
+    margin-top    : 50px;
+    margin-bottom : 50px;
 }
 
 .pavi-shots-image-text {
-    padding-left: 18px;
-    font-size: 16px !important;
-    line-height: 2;
+    padding-left : 18px;
+    font-size    : 16px !important;
+    line-height  : 2;
 }
 
 .pavi-main-flex-container {
-    display: flex;
-    align-content: center;
-    align-items: start;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-top: 30px;
+    display         : flex;
+    align-content   : center;
+    align-items     : start;
+    flex-direction  : row;
+    flex-flow       : row wrap;
+    justify-content : space-around;
+    margin-top      : 30px;
 }
 
 .pavi-display-table {
-    display: table;
+    display : table;
 }
 
 .pavi-table-border {
-    border: solid 1px #efefef;
+    border : solid 1px #EFEFEF;
 }
 
 .pavi-table-header-border {
-    border-right: solid 1px #efefef;
+    border-right : solid 1px #EFEFEF;
 }
 
 .pavi-media {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 300px;
-    width: 100%;
-    background-color: rgba(210, 215, 211, 1);
+    margin-top       : 30px;
+    margin-bottom    : 30px;
+    height           : 300px;
+    width            : 100%;
+    background-color : rgba(210, 215, 211, 1);
 }
 
 .pavi-paragraph {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top    : 30px;
+    margin-bottom : 30px;
 }
 
 .pavi-ul-numbered {
-    list-style-type: decimal;
-    list-style-position: outside;
-    list-style-image: none;
-    padding-left: 18px;
+    list-style-type     : decimal;
+    list-style-position : outside;
+    list-style-image    : none;
+    padding-left        : 18px;
 }
 
 .pavi-ul-circle {
-    list-style-type: circle;
-    list-style-position: outside;
-    list-style-image: none;
-    padding-left: 18px;
+    list-style-type     : circle;
+    list-style-position : outside;
+    list-style-image    : none;
+    padding-left        : 18px;
 }
 
 .pavi-ul-numbered, .pavi-ul-circle {
-    margin-bottom: 0;
+    margin-bottom : 0;
 }
 
 .pavi-anchor-remove {
-    border: none;
-    transition: unset;
-    color: transparent;
+    border     : none;
+    transition : unset;
+    color      : transparent;
 }
 
 .pavi-ul-numbered li,
 .pavi-ul-circle li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top    : 10px;
+    margin-bottom : 10px;
 }
 
 .pavi-image {
-    border-radius: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius : 30px;
+    box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .pavi-image-width-full {
-    width: 100%;
+    width : 100%;
 }
 
 .pavi-image-width-bolt {
-    width: 100%;
-    max-width: 500px;
+    width     : 100%;
+    max-width : 500px;
 }
 
 .pavi-image-width-persona {
-    width: 100%;
-    max-width: 300px;
+    width     : 100%;
+    max-width : 300px;
 }
 
 .pavi-image-max-width-650 {
-    max-width: 650px !important;
-    width: 100%;
+    max-width : 650px !important;
+    width     : 100%;
 }
 
 .pavi-image-margin-top {
-    margin-top: 30px;
+    margin-top : 30px;
 }
 
 .pavi-image-width-wireframe3 {
-    width: 100%;
-    max-width: 600px;
+    width     : 100%;
+    max-width : 600px;
 }
 
 .pavi-persona-image {
-    border: solid 3px rgba(210, 215, 211, 0.4);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border        : solid 3px rgba(210, 215, 211, 0.4);
+    margin-top    : 30px;
+    margin-bottom : 30px;
+    box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .pavi-gif {
-    border-radius: 30px;
-    width: 100%;
-    max-width: 700px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius : 30px;
+    width         : 100%;
+    max-width     : 700px;
+    box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .pavi-text-center {
-    text-align: center;
+    text-align : center;
 }
 
 .pavi-margin-center {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left  : auto !important;
+    margin-right : auto !important;
 }
