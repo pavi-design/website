@@ -3,13 +3,16 @@
 <header id='header'>
     <div id='pavi-js-particles' class='pavi-particle'></div>
 
-    <a href='{{ .Site.BaseURL }}' title='Rainbow!' class='image avatar pavi-hover-invert'>
-        <img src='{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}' alt=''/></a>
-    {{ with .Site.Params.sidebar.bio }}
-    <h1>{{ . | markdownify }}</h1>
-    {{ end }}
+    <a href='{{ .Site.BaseURL }}' title="That\'s me" class='image avatar pavi-hover-invert'>
+        <img src='{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}' alt=''/>
+    </a>
 
-    <nav id='sidebar'>
+    <h1 class='pavi-z-index-1'>
+        I'm <b>Pavi</b>, a <b>Toronto-based designer</b><br> specializing in <b>user experience</b><br> and <b>visual
+        design</b>.
+    </h1>
+
+    <nav id='sidebar' class='pavi-z-index-1'>
         <ul>
             <li><a href='/'>Work</a></li>
             <li><a target='_blank' href='https://medium.com/@pavilogeswa'>Blog</a></li>

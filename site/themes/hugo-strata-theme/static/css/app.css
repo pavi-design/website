@@ -8,9 +8,9 @@ body {
     top      : 0;
 }
 
-.pavi-hover-invert {
-    /*filter     : invert(0%);*/
-    /*transition : -webkit-filter 0.5s, filter 0.5s;*/
+.pavi-z-index-1 {
+    position: relative;
+    z-index: 1;
 }
 
 .pavi-work-border-radius {
@@ -21,15 +21,14 @@ body {
     margin-left : auto !important;
 }
 
-.pavi-work-container {
-    display     : flex;
-    /*flex-wrap: wrap; todo: remove */
-    align-items : center;
-}
+/* todo: remove */
+/*.pavi-work-container {*/
+/*display     : flex;*/
+/*flex-wrap: wrap; */
+/*align-items : center;*/
+/*}*/
 
 .pavi-hover-invert:hover {
-    /*filter    : invert(100%);*/
-    /*animation : rainbow 0.9s infinite;*/
     animation : rainbow 2s infinite;
 }
 
@@ -66,7 +65,7 @@ body {
 }
 
 .pavi-portfolio-sticky-header {
-    /*position: sticky;*/ /* todo: remove */
+    position       : sticky;
     top            : 0;
     background     : #FFFFFF;
     border-bottom  : solid 3px rgba(210, 215, 211, 0.4);
@@ -201,14 +200,14 @@ body {
     list-style-type     : decimal;
     list-style-position : outside;
     list-style-image    : none;
-    padding-left        : 18px;
+    padding-left        : 20px;
 }
 
 .pavi-ul-circle {
     list-style-type     : circle;
     list-style-position : outside;
     list-style-image    : none;
-    padding-left        : 18px;
+    padding-left        : 20px;
 }
 
 .pavi-ul-numbered, .pavi-ul-circle {
