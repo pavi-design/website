@@ -278,6 +278,10 @@ body {
 }
 
 
+.pavi-sidebar-link {
+    color: #ffffff !important;
+}
+
 .pavi-sidebar-link:after {
     content: '' !important; /* override */
 }
