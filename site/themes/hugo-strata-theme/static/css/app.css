@@ -276,3 +276,8 @@ body {
     margin-left  : auto !important;
     margin-right : auto !important;
 }
+
+
+.pavi-sidebar-link:after {
+    content: '' !important; /* override */
+}
