@@ -232,10 +232,12 @@ body {
 
 .pavi-image-height-medium {
     max-height: 600px;
+    max-width: 660px;
 }
 
 .pavi-image-height-large {
     max-height: 850px;
+    max-width: 660px;
 }
 
 .pavi-image-width-bolt {
