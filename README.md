@@ -1,34 +1,58 @@
-# Victor Hugo CMS Template
-<!-- Markdown snippet -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/bdougie/strata-cms-template)
+# Victor Hugo
 
-![mrtable image](https://s3-us-west-1.amazonaws.com/publis-brian-images/mrtable.png)
+**A Hugo boilerplate for creating truly epic websites**
 
-**A [Hugo](http://gohugo.io/) boilerplate for creating truly epic websites**
+This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline.
 
-This is a boilerplate for using Hugo as a static site generator and Gulp + Weback as your
-asset pipeline.
+Victor Hugo setup to use [PostCSS](http://postcss.org/) and [Babel](https://babeljs.io/) for CSS and JavaScript compiling/transpiling.
 
-It's setup to use post-css and babel for CSS and JavaScript.
+This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
 
 ## Usage
-Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/overview/installing/) installed. If you need to install hugo, run:
 
-Clone this repository and run:
+### :exclamation: Prerequisites
+
+You need to have the latest/LTS [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) versions installed in order to use Victor Hugo.
+
+Next step, clone this repository and run:
 
 ```bash
 npm install
+```
+
+This will take some time and will install all packages necessary to run Victor Hugo and its tasks.
+
+### :construction_worker: Development
+
+While developing your website, use:
+
+```bash
 npm start
 ```
 
-Then visit http://localhost:3000/ - BrowserSync will automatically reload CSS or
-refresh the page when stylesheets or content changes.
+or for developing your website with `hugo server --buildDrafts --buildFuture`, use:
 
-To build your static output to the `/dist` folder, use:
+```bash
+npm run preview
+```
+
+Then visit http://localhost:3000/ _- or a new browser windows popped-up already -_ to preview your new website. Webpack Dev Server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
+
+### :package: Static build
+
+To build a static version of the website inside the `/dist` folder, run:
 
 ```bash
 npm run build
 ```
+
+To get a preview of posts or articles not yet published, run:
+
+```bash
+npm run build:preview
+```
+
+See [package.json](package.json#L8) for all tasks.
 
 ## Structure
 
@@ -41,47 +65,9 @@ npm run build
 |  |  |--index.html    // The index page
 |  |--static           // Files in here ends up in the public folder
 |--src                 // Files that will pass through the asset pipeline
-|  |--css              // CSS files in the root of this folder will end up in /css/...
-|  |--js               // app.js will be compiled to /js/app.js with babel
+|  |--css              // Webpack will bundle imported css seperately
+|  |--index.js         // index.js is the webpack entry for your css & js assets
 ```
-## CMS
-
-### How it works
-
-Netlify CMS is a single-page app that you pull into the `/admin` part of your site.
-
-It presents a clean UI for editing content stored in a Git repository.
-
-You setup a YAML config to describe the content model of your site, and typically
-tweak the main layout of the CMS a bit to fit your own site.
-
-### Setup GitHub as a Backend
-
-In the `config.yml` file [change the GitHub owner and repo](https://github.com/bdougie/strata-cms-template/blob/master/site/static/admin/config.yml#L3) to reflect your repo:
-
-```yaml
-backend:
-  name: github
-  repo: owner/repo # Path to your Github repository
-  branch: master # Branch to update (master by default)
-  
-  ...
-```
-When a user navigates to `/admin` she'll be prompted to login, and once authenticated
-she'll be able to create new content or edit existing content.
-The default Github-based authenticator integrates with Netlify's [Authentication Provider feature](https://www.netlify.com/docs/authentication-providers) and the repository
-backend integrates directly with Github's API.
-
-To get everything hooked up, setup continuous deployment from Github to Netlify
-and then follow [the documentation](https://www.netlify.com/docs/authentication-providers)
-to setup Github as an authentication provider.
-
-That's it, now you should be able to go to the `/admin` section of your site and
-log in.
-
-### Find out more and contribute
-
-Visit the [Netlify CMS](https://github.com/netlify/netlify-cms/) to find out more and contribute. 
 
 ## Basic Concepts
 
@@ -96,25 +82,35 @@ https://gohugo.io/templates/functions/
 For assets that are completely static and don't need to go through the asset pipeline,
 use the `site/static` folder. Images, font-files, etc, all go there.
 
-Files in the static folder ends up in the web root. So a file called `site/static/favicon.ico`
+Files in the static folder end up in the web root. So a file called `site/static/favicon.ico`
 will end up being available as `/favicon.ico` and so on...
 
-The `src/js/app.js` file is the entrypoint for webpack and will be built to `/dist/app.js`.
+The `src/index.js` file is the entrypoint for webpack and will be built to `/dist/main.js`
 
-You can use ES6 and use both relative imports or import libraries from npm.
+You can use **ES6** and use both relative imports or import libraries from npm.
 
-Any CSS file directly under the `src/css/` folder will get compiled with [PostCSS Next](http://cssnext.io/)
-to `/dist/css/{filename}.css`. Import statements will be resolved as part of the build
+Any CSS file imported into the `index.js` will be run through Webpack, compiled with [PostCSS Next](http://cssnext.io/), and
+minified to `/dist/[name].[hash:5].css`. Import statements will be resolved as part of the build.
 
-## Deploying to netlify
+## Environment variables
+
+To separate the development and production _- aka build -_ stages, all gulp tasks run with a node environment variable named either `development` or `production`.
+
+You can access the environment variable inside the theme files with `getenv "NODE_ENV"`. See the following example for a conditional statement:
+
+    {{ if eq (getenv "NODE_ENV") "development" }}You're in development!{{ end }}
+
+All tasks starting with _build_ set the environment variable to `production` - the other will set it to `development`.
+
+## Deploying to Netlify
 
 - Push your clone to your own GitHub repository.
 - [Create a new site on Netlify](https://app.netlify.com/start) and link the repository.
 
-Now netlify will build and deploy your site whenever you push to git.
+Now Netlify will build and deploy your site whenever you push to git.
 
-##  Enjoy!!
+You can also click this button:
 
-#### License
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/victor-hugo)
 
-[MIT](LICENSE)
+## Enjoy!! 😸

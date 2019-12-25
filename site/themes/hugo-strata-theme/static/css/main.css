@@ -2019,7 +2019,7 @@
 				border-radius: 0.35em;
 				border: solid 3px rgba(255, 255, 255, 0.5);
 				color: #fff;
-				content: 'View';
+				/*content: 'View';*/
 				display: inline-block;
 				font-size: 0.8em;
 				font-weight: 400;
@@ -3144,7 +3144,7 @@
 
 	#sidebar ul li a,
 	#sidebar ul li a a:visited {
-		color: #a2a2a2;
+		color: #ffffff;
 		text-decoration: none;
 	}
 
