@@ -349,6 +349,7 @@ body {
 .pavi-pass-field {
     width: 200px !important;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .pavi-pass-error {
@@ -364,7 +365,7 @@ body {
     background-color: #49bf9d;
     border-color: #49bf9d;
     font-size: 16px;
-    padding: .375rem .75rem;
+    padding: 10px 15px;
     border-radius: .25rem;
     color: white;
 }
