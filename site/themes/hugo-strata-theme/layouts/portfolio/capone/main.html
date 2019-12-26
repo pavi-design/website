@@ -1,0 +1,212 @@
+{{ define "main" }}
+
+<script>
+    function convertToHash (text) {
+        let hash = 0, i, chr;
+        if (text && text.length === 0) return hash;
+        for (i = 0; i < text.length; i++) {
+            chr   = text.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0;
+        }
+        return hash;
+    }
+
+
+    function onSubmit () {
+        const errorTextEle = document.querySelector('#pavi-password-error-text');
+        errorTextEle.textContent = '';
+
+        const submitBtnEle = document.querySelector('#pavi-password-submit-btn');
+        setTimeout(function () {
+            submitBtnEle.textContent = 'Verifying...';
+        }, 200);
+
+        const passwordFieldEle = document.querySelector('#pavi-password-field');
+        const userPassword = passwordFieldEle.value;
+        const userPasswordHash = convertToHash(userPassword);
+
+        if (userPasswordHash === -542983168) {
+            setTimeout(function () {
+                submitBtnEle.textContent = 'Submit';
+
+                const passModal = document.querySelector('#pavi-pass-modal-ele');
+                passModal.style.display = "none";
+
+                const contentEle = document.querySelector('#pavi-pass-protected-content');
+                contentEle.style.display = "block";
+            }, 800);
+        }
+        else {
+            setTimeout(function () {
+                submitBtnEle.textContent = 'Submit';
+                errorTextEle.textContent = 'Incorrect Password.';
+            }, 800);
+        }
+    }
+</script>
+
+<div class='pavi-pass-modal-jar' id='pavi-pass-modal-ele'>
+
+    <div class='pavi-pass-lock-icon pavi-pass-margin'>
+        <img src="{{ $.Site.BaseURL }}images/green-lock.png" alt='lock icon'>
+    </div>
+
+    <span class='pavi-pass-info'>This page is password-protected.</span>
+
+    <div id='pavi-password-error-text' class='pavi-pass-error'></div>
+
+    <form onsubmit="return false;" style='margin: 0'>
+
+        <input type="password" id='pavi-password-field'
+               class="pavi-pass-field" placeholder="Password field" />
+
+        <button id='pavi-password-submit-btn' type='submit'
+                class='pavi-pass-submit-btn' onclick='onSubmit()'>
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+<div id='pavi-pass-protected-content'>
+
+
+    <div class="pavi-text-center pavi-main-margin">
+        <img class='pavi-image pavi-image-width-hikr'
+             src="{{ $.Site.BaseURL }}images/portfolio/capone/cap1logo.png">
+    </div>
+
+    <table class="pavi-table-border pavi-font">
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Website</td>
+            <td>
+                <a target='_blank' href='https://www.capitalone.ca/'>
+                    capitalone.ca
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Role</td>
+            <td>Wireframing and Visual Design</td>
+        </tr>
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Team</td>
+            <td>Product Design, Creative Team, and Developers</td>
+        </tr>
+    </table>
+
+    <div class='pavi-main-font'>Problem</div>
+
+    <div class='pavi-font pavi-paragraph'>
+        Customers were finding it difficult to navigate and find the answers they were looking for. Originally, our contact us page would lead you to the FAQs, which wasn’t intuitive nor easy to navigate.
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        Contact Us page is our first line of defense prior to a customer calling in. It’s a place where customers can self-serve and get answers to their questions quickly rather than waiting on a call.
+    </div>
+
+    <div class='pavi-main-flex-container pavi-paragraph'>
+
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/capone/newcontact.png'>
+            <img class='pavi-main-image pavi-image-height-large'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/newcontact.png' alt='contact-page'>
+        </a>
+
+    </div>
+
+    <div class='pavi-main-font'>What is the goal?</div>
+
+    <ul class="pavi-ul-circle pavi-font pavi-display-table pavi-paragraph" style='margin-bottom: 30px'>
+        <li>Encourage self-servicing to help reduce call volume.</li>
+        <li>Present only relevant information to customers.</li>
+        <li>Organize information based on importance in an accessible and digestible format.</li>
+    </ul>
+
+    <div class='pavi-main-font'>Needs Statement</div>
+
+    <div class='pavi-font pavi-paragraph'>
+        We want to help customers and pre-customers answer their questions and solve their problems by providing a fast, seamless and relevant experience so they can get back to their daily life.
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        We led a design jam workshop to help us generate ideas collectively and quickly, as well as paper prototype.
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/capone/c1.1.png'>
+            <img class='pavi-main-image'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/c1.1.png'
+                 style='width: 100%;'>
+        </a>
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/capone/c1.2.png'>
+            <img class='pavi-main-image'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/c1.2.png'
+                 style='width: 100%;'>
+        </a>
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        This was tested with users for ease of use and feedback. We took the feedback from users and stakeholders, iterated and incorporated it into our final design to simplify it further. We were able to test it again, and customers found it easier to navigate and find information.
+    </div>
+
+    <div class='pavi-margin-center pavi-text-center'>
+
+        <a target='_blank' href='https://capitalone.invisionapp.com/share/W59QXQSKYXT#/screens/211318267'
+
+           style='border: none'
+           title='Tempo Project'>
+            <img style='width: 100%; max-width: 250px'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/invisiapp.png'
+                 alt='Tempo'/>
+        </a>
+        <div class='pavi-font' style='margin-bottom: 50px'>
+            Click the phone for an interactive prototype.
+        </div>
+
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/capone/c1.3.png'>
+            <img class='pavi-main-image'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/c1.3.png'
+                 style='width: 100%;'>
+        </a>
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/capone/c1.4.png'>
+            <img class='pavi-main-image'
+                 src='{{ $.Site.BaseURL }}images/portfolio/capone/c1.4.png'
+                 style='width: 100%;'>
+        </a>
+    </div>
+
+    <div class='pavi-main-font pavi-paragraph'>Next Steps</div>
+
+    <div class='pavi-font pavi-paragraph'>
+        Another problem with this page was the content itself, it wasn’t very helpful and sometimes difficult to understand.  It required a rewrite. The future state is to have a support page that will ultimately replace the contact us and faq. The information will be crowd-sourced internally,and we’re working with copywriters to simplify the language and replace the financial lingo.
+    </div>
+
+</div>
+
+{{ end }}

@@ -103,6 +103,10 @@ body {
     margin-bottom : 14px;
 }
 
+.pavi-portfolio-article-text {
+    height: 38px;
+}
+
 .pavi-anchor-default {
     border-bottom : none !important;
     color         : transparent !important;
@@ -132,7 +136,7 @@ body {
     height        : auto;
     width         : auto;
     max-height    : 400px;
-    border-radius : 30px;
+    border-radius : 5px;
     margin        : 5px auto;
     box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
     padding       : 5px;
@@ -222,7 +226,7 @@ body {
 }
 
 .pavi-image {
-    border-radius : 30px;
+    border-radius : 5px;
     box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -248,6 +252,7 @@ body {
 .pavi-image-width-hikr {
     width     : 100%;
     max-width : 200px;
+    box-shadow: unset !important;
 }
 
 .pavi-image-width-persona {
@@ -277,7 +282,7 @@ body {
 }
 
 .pavi-gif {
-    border-radius : 30px;
+    border-radius : 5px;
     width         : 100%;
     max-width     : 700px;
     box-shadow    : 0 0 20px rgba(0, 0, 0, 0.3);
@@ -300,3 +305,72 @@ body {
 .pavi-sidebar-link:after {
     content: '' !important; /* override */
 }
+
+/* START Password Modal */
+
+.pavi-pass-modal-jar {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    border: solid 1px #eaeaea;
+    flex-direction: column;
+}
+
+.pavi-pass-modal {
+    padding: 2rem 4rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.pavi-pass-lock-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.pavi-pass-info {
+    margin-bottom: 20px;
+}
+
+.pavi-pass-field {
+    width: 200px !important;
+    margin-bottom: 30px;
+}
+
+.pavi-pass-error {
+    height: 28px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #EF5350;
+}
+
+.pavi-pass-submit-btn {
+    cursor: pointer;
+    text-align: center;
+    background-color: #49bf9d;
+    border-color: #49bf9d;
+    font-size: 16px;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    color: white;
+}
+
+#pavi-pass-protected-content {
+    display: none;
+}
+
+/* END Password Modal */

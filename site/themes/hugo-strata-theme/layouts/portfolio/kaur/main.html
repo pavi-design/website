@@ -1,0 +1,169 @@
+{{ define "main" }}
+
+<script>
+    function convertToHash (text) {
+        let hash = 0, i, chr;
+        if (text && text.length === 0) return hash;
+        for (i = 0; i < text.length; i++) {
+            chr   = text.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0;
+        }
+        return hash;
+    }
+
+    function onSubmit () {
+        const errorTextEle = document.querySelector('#pavi-password-error-text');
+        errorTextEle.textContent = '';
+
+        const submitBtnEle = document.querySelector('#pavi-password-submit-btn');
+        setTimeout(function () {
+            submitBtnEle.textContent = 'Verifying...';
+        }, 200);
+
+        const passwordFieldEle = document.querySelector('#pavi-password-field');
+        const userPassword = passwordFieldEle.value;
+        const userPasswordHash = convertToHash(userPassword);
+
+        if (userPasswordHash === -542983168) {
+            setTimeout(function () {
+                submitBtnEle.textContent = 'Submit';
+
+                const passModal = document.querySelector('#pavi-pass-modal-ele');
+                passModal.style.display = "none";
+
+                const contentEle = document.querySelector('#pavi-pass-protected-content');
+                contentEle.style.display = "block";
+            }, 800);
+        }
+        else {
+            setTimeout(function () {
+                submitBtnEle.textContent = 'Submit';
+                errorTextEle.textContent = 'Incorrect Password.';
+            }, 800);
+        }
+    }
+</script>
+
+<div class='pavi-pass-modal-jar' id='pavi-pass-modal-ele'>
+
+    <div class='pavi-pass-lock-icon pavi-pass-margin'>
+        <img src="{{ $.Site.BaseURL }}images/green-lock.png" alt='lock icon'>
+    </div>
+
+    <span class='pavi-pass-info'>This page is password-protected.</span>
+
+    <div id='pavi-password-error-text' class='pavi-pass-error'></div>
+
+    <form onsubmit="return false;" style='margin: 0'>
+
+        <input type="password" id='pavi-password-field'
+               class="pavi-pass-field" placeholder="Password field" />
+
+        <button id='pavi-password-submit-btn' type='submit'
+                class='pavi-pass-submit-btn' onclick='onSubmit()'>
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+<div id='pavi-pass-protected-content'>
+
+
+    <div class="pavi-text-center pavi-main-margin">
+        <img class='pavi-image pavi-image-width-hikr'
+             src="{{ $.Site.BaseURL }}images/portfolio/kaur/kaurspacelogo.png">
+    </div>
+
+    <table class="pavi-table-border pavi-font">
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Website</td>
+            <td>
+                <a target='_blank' href='https://kaurspace.com/'>
+                    kaurspace.com
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Role</td>
+            <td>Wireframing and Visual Design</td>
+        </tr>
+        <tr>
+            <td class="pavi-table-header-border pavi-font-bold">Team</td>
+            <td>Kim Kirton</td>
+        </tr>
+    </table>
+
+    <div class='pavi-font pavi-paragraph'>
+        Kaur Space was created to show the world that it is possible to #WorkDifferently by unlearning and relearning how to live an integrated life filled with work wellness and impact. The current challenges the company was facing were:
+    </div>
+
+    <ul class="pavi-ul-circle pavi-font pavi-display-table pavi-paragraph" style='margin-bottom: 30px'>
+        <li>They have a product but the direction they are moving towards ( educational content + vision around #WorkingDifferently) does not align with the product being offered.</li>
+        <li>The growth rate for the past 5 months has been -0.82%  and 1.2% conversion rate.</li>
+        <li>The solution was created without data and customer validation of the problem.</li>
+    </ul>
+
+    <div class='pavi-main-font'>Problem</div>
+
+    <div class='pavi-font pavi-paragraph'>
+        People are feeling overworked, tired, and lost in the world of work. They have experienced burnout or currently in the storm of burnout and don’t know what recovery looks like or how to start building a work life that works for them.
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        To address the challenges and problem statement, we met with the stakeholders and held a Design Sprint to identify the scope and needs of the customers.
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/kaur/DSCF7390.JPG'>
+            <img class='pavi-main-image'
+                 src='{{ $.Site.BaseURL }}images/portfolio/kaur/DSCF7390.JPG'>
+        </a>
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        Together we determined the scope of the project by coming up with an MVP which comprised of the main actions the user can take either as a driver or hiker. I was responsible for the visual design of the app, illustration and layout.
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/kaur/DSCF7736.JPG'>
+            <img class='pavi-main-image pavi-image-height-large'
+                 src='{{ $.Site.BaseURL }}images/portfolio/kaur/DSCF7736.JPG'>
+        </a>
+    </div>
+
+    <div class='pavi-font pavi-paragraph'>
+        I was responsible for designing the layout using the brand guidelines, and built out the working prototype on Invision for user testing. We implemented user feedback along with the company stakeholder feedback into the final designs.
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/kaur/brand1.png'>
+            <img class='pavi-main-image pavi-image-height-medium'
+                 src='{{ $.Site.BaseURL }}images/portfolio/kaur/brand1.png'>
+        </a>
+    </div>
+
+    <div class='pavi-main-flex-container'>
+        <a class='pavi-anchor-remove'
+           title='Enlarge'
+           target='_blank'
+           href='{{ $.Site.BaseURL }}images/portfolio/kaur/brand2.png'>
+            <img class='pavi-main-image pavi-image-height-medium'
+                 src='{{ $.Site.BaseURL }}images/portfolio/kaur/brand2.png'>
+        </a>
+    </div>
+
+</div>
+
+{{ end }}
